@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Database
+*.db
+*.sqlite3
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Angular
+.angular/
+frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Test artifacts
+test_guardforge.db
+.pytest_cache/
+htmlcov/
+.coverage
+
+%AppData%/
+.agent/
+.agent-not-to-use/
+implementation_plan.md

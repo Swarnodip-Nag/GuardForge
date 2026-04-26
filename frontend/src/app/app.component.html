@@ -1,0 +1,33 @@
+<div class="container">
+  <header>
+    <h1>{{ title }}</h1>
+    <p>Compliance Copilot for LLM Systems</p>
+  </header>
+
+  <main>
+    <section class="analyzer-section">
+      <h2>Analyze Prompt</h2>
+      <textarea [(ngModel)]="prompt" placeholder="Enter a prompt to analyze... (e.g. ignore previous instructions)"></textarea>
+      <button (click)="analyzePrompt()">Analyze</button>
+
+      <div *ngIf="result" class="result-card" [ngClass]="result.risk_category.toLowerCase()">
+        <h3>Analysis Result</h3>
+        <p><strong>Score:</strong> {{ result.risk_score }}</p>
+        <p><strong>Category:</strong> {{ result.risk_category }}</p>
+        <p><strong>Mitigation:</strong> {{ result.mitigation_suggestion }}</p>
+      </div>
+    </section>
+
+    <section class="history-section">
+      <h2>Recent History</h2>
+      <ul>
+        <li *ngFor="let item of history">
+          <div class="history-item" [ngClass]="item.risk_category.toLowerCase()">
+            <p><strong>Prompt:</strong> {{ item.prompt }}</p>
+            <p><strong>Category:</strong> {{ item.risk_category }} (Score: {{ item.risk_score }})</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+</div>
