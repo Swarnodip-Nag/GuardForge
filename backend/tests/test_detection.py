@@ -2,7 +2,7 @@
 Unit tests for the detection engine.
 Tests both malicious and safe prompts against the rule-based detector.
 """
-from backend.engines.detection import detect_risks
+from engines.detection import detect_risks
 
 
 class TestDetectRisks:

@@ -3,8 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from typing import List
 
-from . import models, schemas, database
-from .engines import detection, scoring, mitigation
+import models, schemas, database
+from engines import detection, scoring, mitigation
 
 models.Base.metadata.create_all(bind=database.engine)
 

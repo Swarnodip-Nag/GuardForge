@@ -2,7 +2,7 @@
 Unit tests for the scoring engine.
 Tests all risk categories: Low, Medium, High, Critical.
 """
-from backend.engines.scoring import calculate_score
+from engines.scoring import calculate_score
 
 
 class TestCalculateScore:
